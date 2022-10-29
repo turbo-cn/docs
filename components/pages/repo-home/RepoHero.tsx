@@ -76,10 +76,9 @@ export function RepoHero() {
             width="200"
             className="w-[160px] md:w-[200px] fill-black dark:fill-white"
           />
-          <HeroText h1>The build system that makes ship happen</HeroText>
+          <HeroText h1>超棒的构建系统</HeroText>
           <SectionSubtext hero>
-            Turborepo is a high-performance build system for JavaScript and
-            TypeScript codebases.
+            Turborepo 是一个高性能的 JavaScript 和 TypeScript 项目构建系统。
           </SectionSubtext>
         </FadeIn>
         <FadeIn
@@ -89,7 +88,7 @@ export function RepoHero() {
           <div className="flex flex-col w-full gap-3 md:!flex-row">
             <CTAButton>
               <Link href="/repo/docs">
-                <a className="block py-3">Get Started</a>
+                <a className="block py-3">开始使用</a>
               </Link>
             </CTAButton>
             <CTAButton outline>

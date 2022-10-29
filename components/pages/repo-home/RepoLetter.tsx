@@ -1,20 +1,20 @@
-import { HeroText } from "../home-shared/Headings";
-import Image from "next/future/image";
-import cn from "classnames";
-import gradients from "../home-shared/gradients.module.css";
-import { FadeIn } from "../home-shared/FadeIn";
-import { CTAButton } from "../home-shared/CTAButton";
-import Link from "next/link";
-import { Gradient } from "../home-shared/Gradient";
+import { HeroText } from "../home-shared/Headings"
+import Image from "next/future/image"
+import cn from "classnames"
+import gradients from "../home-shared/gradients.module.css"
+import { FadeIn } from "../home-shared/FadeIn"
+import { CTAButton } from "../home-shared/CTAButton"
+import Link from "next/link"
+import { Gradient } from "../home-shared/Gradient"
 
 export function RepoLetter() {
   return (
     <section className="relative flex flex-col items-center px-6 py-16 font-sans md:py-24 lg:py-32 gap-14">
       <FadeIn>
         <HeroText className="lg:text-[65px]">
-          Scaling your Codebase
+          减轻你的项目
           <br />
-          shouldn&apos;t be so difficult
+          这没那么难
         </HeroText>
       </FadeIn>
       <div className="flex flex-col max-w-xl leading-6 md:text-lg lg:text-lg">
@@ -102,7 +102,7 @@ export function RepoLetter() {
         <div className="max-w-[180px] w-full">
           <CTAButton>
             <Link href="/repo/docs">
-              <a className="block py-3 font-sans">Start Building</a>
+              <a className="block py-3 font-sans">开始构建</a>
             </Link>
           </CTAButton>
         </div>
@@ -114,5 +114,5 @@ export function RepoLetter() {
         />
       </FadeIn>
     </section>
-  );
+  )
 }
