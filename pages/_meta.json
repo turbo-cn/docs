@@ -19,11 +19,10 @@
     }
   },
   "showcase": "案例",
-  "enterprise": {
-    "title": "企业",
-    "href": "https://vercel.com/contact/turborepo?utm_source=turbo.build&utm_medium=referral&utm_campaign=header-enterpriseLink",
-    "newWindow": true,
-    "display": "hidden"
+  "official-website": {
+    "title": "官网",
+    "href": "https://turbo.build/",
+    "newWindow": true
   },
   "confirm": {
     "title": "Confirm",
