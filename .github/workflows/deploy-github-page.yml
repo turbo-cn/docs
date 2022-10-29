@@ -24,7 +24,7 @@ jobs:
         run: npm run build:static
 
       - name: Create CNAME
-        run: echo -e 'turbo-repo.cn\nturbo-pack.cn' > .output/dest/CNAME
+        run: echo -e 'turbo-repo.cn\nturbo-pack.cn' > out/CNAME
 
       - name: Push branch
         uses: crazy-max/ghaction-github-pages@v2
