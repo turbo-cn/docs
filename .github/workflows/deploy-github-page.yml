@@ -1,0 +1,42 @@
+name: Deploy github page
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-web:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build pages
+        run: npm run build:static
+
+      - name: Create CNAME
+        run: echo -e 'turbo-repo.cn\nturbo-pack.cn' > .output/dest/CNAME
+
+      - name: Push branch
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache npm
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          restore-keys: node-npm-cache@
+          key: node-npm-cache@${{ hashFiles('**/package-lock.json') }}

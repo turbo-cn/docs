@@ -8,6 +8,7 @@
     "start": "next start",
     "build": "next build",
     "lint": "next lint",
+    "build:static": "next build && next export",
     "rss": "node scripts/generate-rss.js"
   },
   "author": "Jared Palmer",
