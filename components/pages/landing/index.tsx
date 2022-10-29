@@ -140,7 +140,7 @@ function SiteCards() {
             <CardBadge>alpha</CardBadge>
           </div>
           <p className="text-lg !w-[280px] md:!w-[340px] font-space-grotesk text-center opacity-50 dark:opacity-70 ">
-            由 Rust 提供动力的超棒 Webpack 继任者！
+            介绍由 Rust 驱动的 Webpack 的继任者
           </p>
         </Card>
       </FadeIn>
@@ -152,8 +152,8 @@ function Teams() {
   return (
     <div className="mx-auto ">
       <p className="bg-contain mb-2 md:!mb-4 text-sm font-semibold tracking-wide text-center text-[#666666] dark:text-[#888888] uppercase">
-        受到世界各地团队们的
-        <br className="inline md:hidden" />信赖
+        受到世界各地团队们的信赖
+        {/* <br className="inline md:hidden" /> */}
       </p>
       <div className="z-50 grid grid-flow-col grid-rows-6 sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-1">
         <Clients
