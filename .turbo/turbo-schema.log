@@ -1,0 +1,4 @@
+
+> docs@1.0.0 schema /home/yinxulai/github/turbo/docs
+> turbo-gen ./public/schema.json
+
