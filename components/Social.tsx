@@ -18,7 +18,7 @@ function Github() {
 function Discord() {
   return (
     <a
-      href="https://discord.gg/s7rHKzAU"
+      href="https://discord.gg/zq8QyC47gZ"
       className="hidden p-2 text-current sm:flex hover:opacity-75"
       title="Turbo Discord server"
       target="_blank"

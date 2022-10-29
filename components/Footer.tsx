@@ -50,7 +50,7 @@ const navigation = {
     },
     {
       name: "Discord",
-      href: "https://discord.gg/s7rHKzAU",
+      href: "https://discord.gg/zq8QyC47gZ",
     },
   ],
   company: [
