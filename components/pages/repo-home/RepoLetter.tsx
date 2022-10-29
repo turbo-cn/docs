@@ -12,7 +12,7 @@ export function RepoLetter() {
     <section className="relative flex flex-col items-center px-6 py-16 font-sans md:py-24 lg:py-32 gap-14">
       <FadeIn>
         <HeroText className="lg:text-[65px]">
-          减轻你的项目
+          扩展你的项目
           <br />
           这没那么难
         </HeroText>

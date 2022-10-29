@@ -124,7 +124,7 @@ function SiteCards() {
           className="turborepoCardBg"
         >
           <p className="text-lg !w-[280px] md:!w-[340px] font-space-grotesk text-center opacity-50 dark:opacity-70">
-            高性能的 JavaScript 和 TypeScript 构建系统工具
+            高性能的 JavaScript 和 TypeScript 项目构建系统
           </p>
         </Card>
       </FadeIn>
@@ -183,7 +183,7 @@ function LandingPage() {
             开干！
           </h1>
           <p className="mx-6 text-xl max-h-[112px] md:max-h-[96px] w-[315px] md:w-[660px] md:text-2xl font-space-grotesk text-center text-[#666666] dark:text-[#888888]">
-            Turbo 是一个用于 JavaScript 和 TypeScript 的高性能打包构建工具，使用 Rust 实现！
+            Turbo 是一个用 Rust 实现的 JavaScript 和 TypeScript 高性能打包构建工具
           </p>
         </FadeIn>
         <SiteCards />

@@ -55,7 +55,7 @@ const REPO_FEATURES: Features = [
   },
   {
     name: "并行处理",
-    description: `在不浪费空闲 CPU 的情况下，以最大并行度使用每个内核执行构建。`,
+    description: `不浪费任何闲置 cpu 性能，以每个核心最大的并行度来执行构建。`,
     iconDark: LightningIconDark,
     iconLight: LightningIconLight,
     page: "all",
