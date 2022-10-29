@@ -124,8 +124,7 @@ function SiteCards() {
           className="turborepoCardBg"
         >
           <p className="text-lg !w-[280px] md:!w-[340px] font-space-grotesk text-center opacity-50 dark:opacity-70">
-            High-performance build system for JavaScript and TypeScript
-            codebases.
+            高性能的 JavaScript 和 TypeScript 项目构建系统
           </p>
         </Card>
       </FadeIn>
@@ -141,7 +140,7 @@ function SiteCards() {
             <CardBadge>alpha</CardBadge>
           </div>
           <p className="text-lg !w-[280px] md:!w-[340px] font-space-grotesk text-center opacity-50 dark:opacity-70 ">
-            Introducing the Rust-powered successor to Webpack.
+            介绍由 Rust 驱动的 Webpack 的继任者
           </p>
         </Card>
       </FadeIn>
@@ -153,8 +152,8 @@ function Teams() {
   return (
     <div className="mx-auto ">
       <p className="bg-contain mb-2 md:!mb-4 text-sm font-semibold tracking-wide text-center text-[#666666] dark:text-[#888888] uppercase">
-        Trusted by teams from
-        <br className="inline md:hidden" /> around the world
+        受到世界各地团队们的信赖
+        {/* <br className="inline md:hidden" /> */}
       </p>
       <div className="z-50 grid grid-flow-col grid-rows-6 sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-1">
         <Clients
@@ -181,11 +180,10 @@ function LandingPage() {
         <Background />
         <FadeIn className="z-10 flex flex-col items-center justify-center w-full h-full">
           <h1 className="mt-12 lg:!mt-20 mx-6 w-[300px] md:!w-full font-extrabold text-5xl lg:text-6xl leading-tight text-center mb-4 bg-clip-text text-transparent bg-gradient-to-b from-black/80 to-black dark:from-white dark:to-[#AAAAAA]">
-            Make Ship Happen
+            开干！
           </h1>
           <p className="mx-6 text-xl max-h-[112px] md:max-h-[96px] w-[315px] md:w-[660px] md:text-2xl font-space-grotesk text-center text-[#666666] dark:text-[#888888]">
-            Turbo is an incremental bundler and build system optimized for
-            JavaScript and TypeScript, written in Rust.
+            Turbo 是一个用 Rust 实现的 JavaScript 和 TypeScript 高性能打包构建工具
           </p>
         </FadeIn>
         <SiteCards />
