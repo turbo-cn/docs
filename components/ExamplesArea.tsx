@@ -26,7 +26,7 @@ export const ExamplesArea = () => {
           Icon: GitHubIcon,
           description:
             "了解如何与流行的 CSS 框架 Tailwind 集成。",
-          name: "和 Tailwind CSS 一起使用",
+          name: "集成 Tailwind CSS",
         }}
         href="https://github.com/vercel/turbo/tree/main/examples/with-tailwind"
       ></DetailedFeatureLink>
