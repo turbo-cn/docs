@@ -82,7 +82,7 @@ export const LearnMoreArea = () => {
           description: `您运行任务的方式可能没有优化。 Turborepo 通过智能调度加速它们，最大限度地减少空闲 CPU。`,
           name: "最优多任务处理",
         }}
-        href="/repo/docs/core-concepts/running-tasks"
+        href="/repo/docs/core-concepts/monorepos/running-tasks"
       ></DetailedFeatureLink>
     </div>
   );
