@@ -17,24 +17,24 @@ export const QuickStartArea = () => {
       <DetailedFeatureLink
         feature={{
           Icon: PencilIcon,
-          description: `Add Turborepo to any JavaScript or TypeScript project in minutes.`,
-          name: "Add to existing project",
+          description: `在几分钟内将 Turborepo 添加到任何 JavaScript 或 TypeScript 项目。`,
+          name: "添加到已有项目",
         }}
         href="/repo/docs/getting-started/add-to-project"
       ></DetailedFeatureLink>
       <DetailedFeatureLink
         feature={{
           Icon: SparklesIcon,
-          description: `Build a brand-new monorepo with shared packages powered by Turborepo.`,
-          name: "Create a new monorepo",
+          description: `使用由 Turborepo 提供支持的共享包构建全新的 monorepo。`,
+          name: "创建一个新的 monorepo",
         }}
         href="/repo/docs/getting-started/create-new"
       ></DetailedFeatureLink>
       <DetailedFeatureLink
         feature={{
           Icon: ServerIcon,
-          description: `Incrementally add Turborepo to your existing monorepo codebase.`,
-          name: "Add to existing monorepo",
+          description: `将 Turborepo 逐步添加到您现有的 monorepo 代码库中。`,
+          name: "添加到已有的 monorepo 项目中",
         }}
         href="/repo/docs/getting-started/existing-monorepo"
       ></DetailedFeatureLink>
@@ -48,18 +48,18 @@ export const MonoreposArea = () => {
       <DetailedFeatureLink
         feature={{
           Icon: LightBulbIcon,
-          description: `Understand why monorepos don't scale - and why Turborepo is the solution.`,
-          name: "Why Turborepo?",
+          description: `了解为什么 monorepos 不能扩展 - 以及为什么 Turborepo 是解决方案。`,
+          name: "为什么是 Turborepo?",
         }}
         href="/repo/docs/core-concepts/monorepos"
       ></DetailedFeatureLink>
       <DetailedFeatureLink
         feature={{
           Icon: BookOpenIcon,
-          description: `Learn the basics of monorepos before you dive in to Turborepo.`,
-          name: "Read the Monorepo Handbook",
+          description: `在深入了解 Turborepo 之前了解 monorepos 的基础知识。`,
+          name: "阅读 Monorepo 手册",
         }}
-        href="/docs/handbook"
+        href="/repo/docs/handbook"
       ></DetailedFeatureLink>
     </div>
   );
@@ -71,18 +71,18 @@ export const LearnMoreArea = () => {
       <DetailedFeatureLink
         feature={{
           Icon: CloudUploadIcon,
-          description: `Turborepo remembers the output of any task you run - and can skip work that's already been done.`,
-          name: "Never do the same work twice",
+          description: `Turborepo 会记录您运行的任何任务的输出 - 并且可以跳过已经完成的工作。`,
+          name: "永远不要两次做同样的工作",
         }}
         href="/repo/docs/core-concepts/caching"
       />
       <DetailedFeatureLink
         feature={{
           Icon: LightningBoltIcon,
-          description: `The way you run your tasks is probably not optimized. Turborepo speeds them up with smart scheduling, minimising idle CPU's.`,
-          name: "Maximum Multitasking",
+          description: `您运行任务的方式可能没有优化。 Turborepo 通过智能调度加速它们，最大限度地减少空闲 CPU。`,
+          name: "最优多任务处理",
         }}
-        href="/repo/docs/core-concepts/running-tasks"
+        href="/repo/docs/core-concepts/monorepos/running-tasks"
       ></DetailedFeatureLink>
     </div>
   );

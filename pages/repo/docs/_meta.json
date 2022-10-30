@@ -1,19 +1,19 @@
 {
   "index": {
-    "title": "Quickstart"
+    "title": "快速开始"
   },
-  "getting-started": "Getting Started",
-  "core-concepts": "Core Concepts",
-  "handbook": "Monorepo Handbook",
+  "getting-started": "入门",
+  "core-concepts": "核心概念",
+  "handbook": "Monorepo 手册",
   "ci": "CI Recipes",
-  "reference": "API Reference",
+  "reference": "API 参考",
   "changelog": {
-    "title": "Changelog",
+    "title": "修改记录",
     "href": "https://github.com/vercel/turbo/releases",
     "newWindow": true
   },
-  "upgrading-to-v1": "Upgrading to v1",
-  "troubleshooting": "Troubleshooting",
-  "acknowledgements": "Acknowledgements",
+  "upgrading-to-v1": "升级到 v1",
+  "troubleshooting": "故障排除",
+  "acknowledgements": "致谢",
   "faq": "FAQ"
 }
