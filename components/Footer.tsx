@@ -57,11 +57,11 @@ const navigation = {
     { name: "Vercel", href: "https://vercel.com" },
     {
       name: "开源软件",
-      href: "https://vercel.com/oss?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-ossLink",
+      href: "https://vercel.com/oss?utm_source=turbo-pack.cn&utm_medium=referral&utm_campaign=footer-ossLink",
     },
     {
       name: "联系销售",
-      href: "https://vercel.com/contact/turborepo?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-enterpriseLink",
+      href: "https://vercel.com/contact/turborepo?utm_source=turbo-pack.cn&utm_medium=referral&utm_campaign=footer-enterpriseLink",
     },
     { name: "推特", href: "https://twitter.com/vercel" },
   ],
@@ -161,7 +161,7 @@ export function FooterContent() {
               target="_blank"
               rel="noopener noreferrer"
               title="vercel.com homepage"
-              href="https://vercel.com?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-logoLink"
+              href="https://vercel.com?utm_source=turbo-pack.cn&utm_medium=referral&utm_campaign=footer-logoLink"
             >
               <VercelLogo />
             </a>
