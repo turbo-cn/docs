@@ -166,8 +166,8 @@ export function FooterContent() {
               <VercelLogo />
             </a>
             <p className="mt-4 text-xs text-gray-500 dark:text-[#888888]">
-              &copy; {new Date().getFullYear()} Vercel, Inc. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Vercel, Inc. 版权所有，
+              中文版由 <a href='https://github.com/turbo-cn'>turbo 中文小组</a>翻译制作
             </p>
           </div>
         </div>
