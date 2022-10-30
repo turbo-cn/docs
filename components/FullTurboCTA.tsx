@@ -1,24 +1,24 @@
-import { Container } from "./Container";
-import Callout from "./Callout";
-import Link from "next/link";
+import { Container } from "./Container"
+import Callout from "./Callout"
+import Link from "next/link"
 
 function FullTurboCTA() {
   return (
     <div className="flex flex-col items-start w-full gap-4 p-6 mt-8 bg-white shadow-lg md:items-center md:flex-row rounded-xl dark:bg-opacity-5">
       <div className="justify-start flex-1">
         <h3 className="font-semibold leading-6 tracking-tight">
-          Ready to go
-          <span className="m-2 font-mono full-turbo">{">>>"} FULL TURBO</span>
-          at your organization?
+          准备好使用
+          <span className="m-2 font-mono full-turbo">{">>>"}TURBO 工具栈</span>
+          在你的组织中？
         </h3>
         <div className="text-base font-medium leading-7 text-gray-500 dark:text-gray-400">
-          Vercel&apos;s Experts can bring your entire team up to speed quickly
+          Vercel 的专家可以让您的整个团队快速上手
         </div>
       </div>
       <div className="flex-none">
         <Link href="https://vercel.com/contact/turborepo?utm_source=turbo.build&utm_medium=referral&utm_campaign=turborepo_side_banner">
           <a className="justify-center block px-4 py-2 text-black no-underline bg-white rounded-full dark:bg-opacity-5 dark:text-white">
-            Talk to an Expert
+            与专家交谈
           </a>
         </Link>
       </div>
@@ -34,7 +34,7 @@ function FullTurboCTA() {
         }
       `}</style>
     </div>
-  );
+  )
 }
 
-export default FullTurboCTA;
+export default FullTurboCTA
