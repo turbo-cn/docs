@@ -8,3 +8,7 @@
 node_modules
 .next
 out
+
+# ide
+.vscode
+.idea

@@ -1,21 +1,21 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import type { DocumentInitialProps, DocumentContext } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document"
+import type { DocumentInitialProps, DocumentContext } from "next/document"
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx);
+    const initialProps = await Document.getInitialProps(ctx)
 
-    return initialProps;
+    return initialProps
   }
 
   render() {
     return (
       <Html lang="zh-CN">
         <Head>
-          <meta name="keywords" content="turbo，turborepo，turbopack，turborepo中文文档，turbopack中文文档，turborepo汉化，turbopack汉化" />
-          <meta name="description" content="Turbo 是一个用 Rust 实现的 JavaScript 和 TypeScript 高性能打包构建工具"></meta>
+          <GoogleAnalytics />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -32,8 +32,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument
