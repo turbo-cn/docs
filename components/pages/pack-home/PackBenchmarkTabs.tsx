@@ -12,27 +12,27 @@ const TABS: {
 }[] = [
   {
     id: "cold",
-    title: "Cold Start",
+    title: "冷启动",
     soon: false,
-    tooltip: "First run",
+    tooltip: "首次运行",
   },
   {
     id: "file_change",
-    title: "File Change",
+    title: "文件修改",
     soon: false,
-    tooltip: "Hot Reload (HMR)",
+    tooltip: "热加载 (HMR)",
   },
   {
     id: "code_build",
-    title: "Code Build",
+    title: "代码编译",
     soon: true,
-    tooltip: "First Build",
+    tooltip: "首次编译",
   },
   {
     id: "build_from_cache",
-    title: "Build from Cache",
+    title: "缓存编译",
     soon: true,
-    tooltip: "Second Build",
+    tooltip: "非第一次编译",
   },
 ];
 

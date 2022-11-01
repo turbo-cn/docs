@@ -40,11 +40,11 @@ function HeaderLogo() {
       >
         <path d="M16.88 3.549L7.12 20.451" />
       </svg>
-
       <Link href="/" passHref>
-        <a title="Home" className="hover:opacity-75">
+        <a title="Home" className="hover:opacity-75 flex flex-row items-center">
           <TurboLogo height={32} className={styles.desktopLogo} />
           <TurboLogoCondensed height={32} className={styles.mobileLogo} />
+          <span className={`font-medium ml-1 ${styles.desktopLogo}`}>中文</span>
         </a>
       </Link>
       <div className={styles.siteSwitcher}>

@@ -53,10 +53,9 @@ export function PackBenchmarks() {
   return (
     <FadeIn className="relative flex flex-col items-center justify-center w-full gap-10 py-16 font-sans md:py-24 lg:py-32">
       <div className="flex flex-col items-center gap-5 md:gap-6">
-        <SectionHeader>Faster Than Fast</SectionHeader>
+        <SectionHeader>快上加快</SectionHeader>
         <SectionSubtext>
-          Crafted by the creators of Webpack, Turbopack delivers unparalleled
-          performance at scale.
+          Turbopack 由 Webpack 的创建者精心制作，提供无与伦比的强大性能。
         </SectionSubtext>
       </div>
       <div className="flex flex-col items-center w-full">

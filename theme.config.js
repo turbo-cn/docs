@@ -17,17 +17,17 @@ const theme = {
   chat: {
     icon: Discord,
   },
-  docsRepositoryBase: "https://github.com/vercel/turbo/blob/main/docs",
+  docsRepositoryBase: "https://github.com/turbo-cn/docs/blob/main",
   getNextSeoProps: function SEO() {
     const router = useRouter();
     const { frontMatter } = useConfig();
 
-    let section = "Turbo";
+    let section = "Turbo 中文文档";
     if (router?.pathname.startsWith("/pack")) {
-      section = "Turbopack";
+      section = "Turbopack 中文文档";
     }
     if (router?.pathname.startsWith("/repo")) {
-      section = "Turborepo";
+      section = "Turborepo 中文文档";
     }
 
     const defaultTitle = frontMatter.overrideTitle || section;

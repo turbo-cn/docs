@@ -24,7 +24,7 @@ jobs:
         run: npm run build:static
 
       - name: Create CNAME
-        run: echo -e 'turbo-repo.cn\nturbo-pack.cn' > out/CNAME
+        run: echo -e 'turbo-pack.cn' > out/CNAME
 
       - name: Create .nojekyll
         run: touch out/.nojekyll

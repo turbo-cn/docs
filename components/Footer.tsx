@@ -28,20 +28,20 @@ function FooterHeader({ children }: { children: ReactNode }) {
 
 const navigation = {
   general: [
-    { name: "Blog", href: "/blog" },
+    { name: "博客", href: "/blog" },
     { name: "Releases", href: "https://github.com/vercel/turbo/releases" },
   ],
   repo: [
-    { name: "Documentation", href: "/repo/docs" },
+    { name: "文档", href: "/repo/docs" },
     {
-      name: "API Reference",
+      name: "API 文档",
       href: "/repo/docs/reference/command-line-reference",
     },
     { name: "FAQ", href: "/repo/docs/faq" },
   ],
   pack: [
-    { name: "Documentation", href: "/pack/docs" },
-    { name: "Features", href: "/pack/docs/features" },
+    { name: "文档", href: "/pack/docs" },
+    { name: "特性", href: "/pack/docs/features" },
   ],
   support: [
     {
@@ -50,24 +50,24 @@ const navigation = {
     },
     {
       name: "Discord",
-      href: "https://turbo.build/discord",
+      href: "https://discord.gg/zq8QyC47gZ",
     },
   ],
   company: [
     { name: "Vercel", href: "https://vercel.com" },
     {
-      name: "Open Source Software",
-      href: "https://vercel.com/oss?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-ossLink",
+      name: "开源软件",
+      href: "https://vercel.com/oss?utm_source=turbo-pack.cn&utm_medium=referral&utm_campaign=footer-ossLink",
     },
     {
-      name: "Contact Sales",
-      href: "https://vercel.com/contact/turborepo?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-enterpriseLink",
+      name: "联系销售",
+      href: "https://vercel.com/contact/turborepo?utm_source=turbo-pack.cn&utm_medium=referral&utm_campaign=footer-enterpriseLink",
     },
-    { name: "Twitter", href: "https://twitter.com/vercel" },
+    { name: "推特", href: "https://twitter.com/vercel" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
+    { name: "隐私政策", href: "/privacy" },
+    { name: "服务条款", href: "/terms" },
   ],
 };
 
@@ -143,14 +143,15 @@ export function FooterContent() {
               </div>
             </div>
           </div>
-          <div className="mt-12 xl:!mt-0">
+          {/* 纯静态部署不支持这个邮件订阅模块了 */}
+          {/* <div className="mt-12 xl:!mt-0">
             <FooterHeader>Subscribe to our newsletter</FooterHeader>
             <p className="mt-4 text-sm text-gray-600 dark:text-[#888888]">
               Subscribe to the Turbo newsletter and stay updated on new releases
               and features, guides, and case studies.
             </p>
             <SubmitForm />
-          </div>
+          </div> */}
         </div>
 
         <div className="pt-8 mt-8 sm:flex sm:items-center sm:justify-between">
@@ -160,13 +161,13 @@ export function FooterContent() {
               target="_blank"
               rel="noopener noreferrer"
               title="vercel.com homepage"
-              href="https://vercel.com?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-logoLink"
+              href="https://vercel.com?utm_source=turbo-pack.cn&utm_medium=referral&utm_campaign=footer-logoLink"
             >
               <VercelLogo />
             </a>
             <p className="mt-4 text-xs text-gray-500 dark:text-[#888888]">
-              &copy; {new Date().getFullYear()} Vercel, Inc. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Vercel, Inc. 版权所有，
+              中文版由 <a href='https://github.com/turbo-cn'>turbo 中文小组</a>翻译制作
             </p>
           </div>
         </div>

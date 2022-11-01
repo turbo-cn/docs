@@ -12,9 +12,9 @@ export function PackLetter() {
     <section className="relative flex flex-col items-center px-6 py-16 font-sans md:py-24 lg:py-32 gap-14">
       <FadeIn>
         <HeroText>
-          Let&apos;s move
+          让我们一起
           <br />
-          the web forward
+          推动 WEB 发展
         </HeroText>
       </FadeIn>
       <div className="flex flex-col max-w-xl leading-6 md:text-lg lg:text-lg">

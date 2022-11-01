@@ -12,8 +12,10 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="zh-CN">
         <Head>
+          <meta name="keywords" content="turbo，turborepo，turbopack，turborepo中文文档，turbopack中文文档，turborepo汉化，turbopack汉化" />
+          <meta name="description" content="Turbo 是一个用 Rust 实现的 JavaScript 和 TypeScript 高性能打包构建工具"></meta>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

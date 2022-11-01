@@ -77,10 +77,9 @@ export function PackHero() {
             width="200"
             className="w-[160px] md:w-[200px] fill-black dark:fill-white"
           />
-          <HeroText h1>The Rust-powered successor to Webpack</HeroText>
+          <HeroText h1>由 Rust 驱动的 Webpack 继任者</HeroText>
           <SectionSubtext hero>
-            Turbopack is an incremental bundler optimized for JavaScript and
-            TypeScript, written in Rust.
+            Turbopack 是一个用于 JavaScript 和 TypeScript 项目的高性能构建系统, 使用 Rust 实现.
           </SectionSubtext>
         </FadeIn>
         <FadeIn
@@ -90,7 +89,7 @@ export function PackHero() {
           <div className="flex flex-col w-full gap-3 md:!flex-row">
             <CTAButton>
               <Link href="/pack/docs">
-                <a className="block py-3">Get Started</a>
+                <a className="block py-3">开始使用</a>
               </Link>
             </CTAButton>
             <CTAButton outline>

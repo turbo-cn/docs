@@ -13,15 +13,15 @@
   "repo": "Repo",
   "pack": "Pack",
   "blog": {
-    "title": "Blog",
+    "title": "博客",
     "theme": {
       "typesetting": "article"
     }
   },
-  "showcase": "Showcase",
-  "enterprise": {
-    "title": "Enterprise",
-    "href": "https://vercel.com/contact/turborepo?utm_source=turbo.build&utm_medium=referral&utm_campaign=header-enterpriseLink",
+  "showcase": "案例",
+  "official-website": {
+    "title": "官网",
+    "href": "https://turbo.build/",
     "newWindow": true
   },
   "confirm": {
@@ -29,11 +29,11 @@
     "display": "hidden"
   },
   "terms": {
-    "title": "Terms of Service",
+    "title": "服务条款",
     "display": "hidden"
   },
   "privacy": {
-    "title": "Privacy Policy",
+    "title": "隐私政策",
     "display": "hidden"
   }
 }

@@ -1,5 +1,5 @@
-import { DetailedFeatureLink } from "./Feature";
-import { GitHubIcon } from "./Icons";
+import { DetailedFeatureLink } from "./Feature"
+import { GitHubIcon } from "./Icons"
 
 export const ExamplesArea = () => {
   return (
@@ -7,9 +7,8 @@ export const ExamplesArea = () => {
       <DetailedFeatureLink
         feature={{
           Icon: GitHubIcon,
-          description: `Minimal Turborepo example for learning the
-              fundamentals.`,
-          name: "Basic",
+          description: `用于学习的最小 Turborepo 示例。`,
+          name: "基本的",
         }}
         href="https://github.com/vercel/turbo/tree/main/examples/basic"
       ></DetailedFeatureLink>
@@ -17,8 +16,8 @@ export const ExamplesArea = () => {
         feature={{
           Icon: GitHubIcon,
           description:
-            "Unify your site's look and feel by sharing a design system across multiple apps.",
-          name: "Design System",
+            "通过在多个应用程序之间共享设计系统来统一您网站的外观。",
+          name: "设计系统",
         }}
         href="https://github.com/vercel/turbo/tree/main/examples/design-system"
       ></DetailedFeatureLink>
@@ -26,8 +25,8 @@ export const ExamplesArea = () => {
         feature={{
           Icon: GitHubIcon,
           description:
-            "Learn how to integrate with Tailwind, the popular CSS framework.",
-          name: "With Tailwind CSS",
+            "了解如何与流行的 CSS 框架 Tailwind 集成。",
+          name: "集成 Tailwind CSS",
         }}
         href="https://github.com/vercel/turbo/tree/main/examples/with-tailwind"
       ></DetailedFeatureLink>
@@ -35,11 +34,11 @@ export const ExamplesArea = () => {
         feature={{
           Icon: GitHubIcon,
           description:
-            "Want to see a super-complex, kitchen-sink example? Includes multiple frameworks, both frontend and backend.",
-          name: "Kitchen Sink",
+            "想看一个超级复杂的组合示例吗？ 包括多个框架，以及前端和后端。",
+          name: "复杂示例",
         }}
         href="https://github.com/vercel/turbo/blob/main/examples/kitchen-sink"
       ></DetailedFeatureLink>
     </div>
-  );
-};
+  )
+}
