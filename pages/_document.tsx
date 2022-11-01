@@ -1,19 +1,21 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import type { DocumentInitialProps, DocumentContext } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document"
+import type { DocumentInitialProps, DocumentContext } from "next/document"
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx);
+    const initialProps = await Document.getInitialProps(ctx)
 
-    return initialProps;
+    return initialProps
   }
 
   render() {
     return (
       <Html lang="zh-CN">
         <Head>
+          <GoogleAnalytics />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -30,8 +32,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

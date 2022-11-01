@@ -75,16 +75,6 @@ const theme = {
       ogUrl = `https://turbo-site-og.vercel.app/api/og?type=${type}${title}`;
     }
 
-    const baiduStatisticsScript = `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement(\"script\");
-        hm.src = "https://hm.baidu.com/hm.js?8e5291f90d0b584803c5c0e31939218e";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    `
-
     return (
       <>
         <meta name="keywords" content="turbo，turborepo，turbopack，turborepo中文文档，turbopack中文文档，turborepo汉化，turbopack汉化"></meta>
@@ -132,7 +122,6 @@ const theme = {
         <link rel="prefetch" href="/repo/docs" as="document" />
         <link rel="prefetch" href="/pack" as="document" />
         <link rel="prefetch" href="/pack/docs" as="document" />
-        <script dangerouslySetInnerHTML={{ __html: baiduStatisticsScript}}></script>
       </>
     );
   },
