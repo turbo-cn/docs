@@ -5,6 +5,8 @@
 # Sentry
 .sentryclirc
 
+.idea/*
+
 node_modules
 .next
 out

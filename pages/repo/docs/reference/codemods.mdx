@@ -1,32 +1,33 @@
 ---
 title: Turborepo Codemods
-description: To make upgrading easier, Turborepo includes codemods and migration scripts.
+description: 为了使升级更容易，Turborepo包括代码代码和迁移脚本。
 ---
 
 # Turborepo Codemods
 
-Turborepo provides Codemod transformations and automatic migration scripts to help upgrade your Turborepo codebase when a feature is deprecated.
+Turborepo提供Codemod转换和自动迁移脚本，以帮助在某个特性被弃用时升级您的Turborepo代码库。
 
-Codemods are transformations that run on your codebase programmatically. This allows for a large amount of changes to be applied without having to manually go through every file.
-
+Codemods是以编程方式在代码库上运行的转换。 这允许应用大量的更改，而不必手动遍历每个文件。
 ## Usage
 
 ```sh
 npx @turbo/codemod <transform> <path>
 ```
 
-- `transform` - name of transform, see available transforms below.
-- `path` - files or directory to transform
-- `--dry` - Do a dry-run, no code will be edited
-- `--print` - Prints the changed output for comparison
+- ' transform ' -变换的名称，参见下面可用的变换。
+- ' path ' -要转换的文件或目录
+- '——dry ' -做一个演练，没有代码将被编辑
+- '——print ' -打印更改后的输出进行比较
 
 ## Turborepo 1.x
 
 ### `add-package-manager`
 
-Transforms the root `package.json` so that `packageManager` key as the detected package manager (`yarn`, `npm`, `pnpm`) and version (e.g. `yarn@1.22.17`). This key is now [supported by Node.js](https://nodejs.org/dist/latest-v17.x/docs/api/packages.html#packagemanager) and is used by Turborepo for faster package manager detection (vs. inferring from just the filesystem alone).
 
-For example, for Yarn v1:
+将根 `package.json` 以便 ' packageManager '键作为检测到的包管理器(' yarn '， ' npm '， ' pnpm ')和版本(例如: “yarn@1.22.17”)。 这个键现在[由Node.js支持](https://nodejs.org/dist/latest-v17.x/docs/api/packages.html#packagemanager)，并且被Turborepo用于更快的包管理器检测(相对于仅从文件系统推断)。
+
+例如，对于Yarn v1:
+
 
 ```json
 // Before
@@ -54,7 +55,7 @@ For example, for Yarn v1:
 
 #### Usage
 
-Go to your project:
+进入你的项目:
 
 ```sh
 cd path-to-your-turborepo/
@@ -71,7 +72,10 @@ npx @turbo/codemod add-package-manager
 Creates the `turbo.json` file at the root of your project based on the `"turbo"` key in `package.json`.
 The `"turbo"` key is subsequently deleted from `package.json`.
 
-For example:
+创建 `turbo.json`的项目根目录下的`"turbo"`键入' package.json '中的。
+' "turbo"键随后从' package.json '中删除。
+
+例如:
 
 ```json
 // Before, package.json
@@ -111,7 +115,7 @@ For example:
 
 #### Usage
 
-Go to your project:
+回到你的项目:
 
 ```sh
 cd path-to-your-turborepo/
@@ -125,8 +129,7 @@ npx @turbo/codemod create-turbo-config
 
 ### `migrate-env-var-dependencies`
 
-Migrates all environment variable dependencies in `turbo.json` from `dependsOn` and `globalDependencies` to `env` and `globalEnv` respectively.
-
+在‘turbo’中迁移所有环境变量依赖项。 从' dependsOn '和' globalDependencies '改为' env '和' globalEnv '。
 For example:
 
 ```json
