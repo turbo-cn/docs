@@ -1,34 +1,33 @@
 ---
-title: Configuration  Options - turbo.json
-description: Learn how to configure Turborepo through `turbo.json`.
+title: 配置选项 - turbo.json
+description: 了解如何配置Turborepo通过 `turbo.json`.
 ---
 
 import Callout from "../../../../components/Callout";
 import OutputModeTable from "../../../../components/output-mode-table.mdx";
 
-# Configuration Options (`turbo.json`)
+# 配置选项 (`turbo.json`)
 
-You can configure the behavior of `turbo` by adding a `turbo.json` file in your monorepo's root (i.e. the same one you specify your `workspaces` key is set for Yarn and npm users).
+您可以通过添加一个' turbo '来配置' turbo '的行为。 json '文件在你的monorepo的根目录中(也就是你为Yarn和npm用户指定的' workspace '键)。
 
 ## `globalDependencies`
 
 `type: string[]`
 
-A list of file globs for implicit global hash dependencies. The contents of these files will be included in the global hashing algorithm and affect the hashes of all tasks.
-This is useful for busting the cache based on `.env` files (not in Git) or any root level file that impacts workspace tasks (but are not represented in the traditional dependency graph (e.g. a root `tsconfig.json`, `jest.config.js`, `.eslintrc`, etc.)).
-
+用于隐式全局哈希依赖项的文件glob列表。 这些文件的内容将包含在全局哈希算法中，并影响所有任务的哈希。
+这对于基于'销毁缓存非常有用。 env '文件(不在Git中)或任何影响工作空间任务的根级文件(但没有在传统的依赖关系图中表示(例如根' tsconfig. env ')。 Json '， ' jest.config.js '， ' .eslintrc '等))。
 **Example**
 
 ```jsonc
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
-    // ... omitted for brevity
+    // ... 为了简便起见,我们省略了
   },
 
   "globalDependencies": [
-    ".env", // contents will impact hashes of all tasks
-    "tsconfig.json" // contents will impact hashes of all tasks
+    ".env", // 内容将影响所有任务的散列
+    "tsconfig.json" // 内容将影响所有任务的散列
   ]
 }
 ```
@@ -37,8 +36,7 @@ This is useful for busting the cache based on `.env` files (not in Git) or any r
 
 `type: string[]`
 
-A list of environment variables for implicit global hash dependencies. The contents of these environment variables will be included in the global hashing algorithm and affect the hashes of all tasks.
-
+用于隐式全局哈希依赖项的环境变量列表。 这些环境变量的内容将包含在全局哈希算法中，并影响所有任务的哈希。
 **Example**
 
 ```jsonc
@@ -53,10 +51,9 @@ A list of environment variables for implicit global hash dependencies. The conte
 ```
 
 ## `pipeline`
+表示项目的任务依赖关系图的对象。 ' turbo '解释这些约定，以正确地调度、执行和缓存项目中任务的输出。
 
-An object representing the task dependency graph of your project. `turbo` interprets these conventions to properly schedule, execute, and cache the outputs of tasks in your project.
-
-Each key in the `pipeline` object is the name of a task that can be executed by `turbo run`. If `turbo` finds a workspace with a `package.json` `scripts` object with a matching key, it will apply the pipeline task configuration to that npm script during execution. This allows you to use `pipeline` to set conventions across your entire Turborepo.
+“pipeline”对象中的每个键都是可以通过“turbo run”执行的任务的名称。 如果' turbo '找到一个带有' package. net '的工作区。 Json ' ' scripts '对象具有匹配的键，它将在执行过程中将管道任务配置应用到该NPM脚本。 这允许你使用“管道”在整个Turborepo中设置约定。
 
 ```jsonc
 {
@@ -82,17 +79,16 @@ Each key in the `pipeline` object is the name of a task that can be executed by 
 
 `type: string[]`
 
-The list of tasks this task depends on.
+此任务所依赖的任务列表。
 
-Prefixing an item in `dependsOn` with a `^` tells `turbo` that this pipeline task depends on the workspace's topological dependencies completing the task with the `^` prefix first (e.g. "a workspace's `build` tasks should only run once all of its `dependencies` and `devDependencies` have completed their own `build` commands").
+在' dependsOn '中给一个项目加上' ^ '前缀，告诉' turbo '这个管道任务依赖于工作区的拓扑依赖关系，首先用' ^ '前缀完成任务(例如。 “一个工作区的‘构建’任务应该只在它的所有‘依赖’和‘devDependencies’完成它们自己的‘构建’命令后才运行”)。
 
-Items in `dependsOn` without `^` prefix, express the relationships between tasks at the workspace level (e.g. "a workspace's `test` and `lint` commands depend on `build` being completed first").
+在' dependsOn '中没有' ^ '前缀的项目，表示工作空间级别的任务之间的关系(例如: “一个工作区的‘test’和‘lint’命令依赖于‘build’首先完成”)。
 
-Prefixing an item in `dependsOn` with a `$` tells `turbo` that this pipeline task depends on the value of that environment variable.
-
+在' dependsOn '中的项目前面加上' $ '，告诉' turbo '该管道任务依赖于该环境变量的值。
 <Callout type="info">
-  Using `$` to declare environment variables in the `dependsOn` config is
-  deprecated. Use the `env` key instead.
+ 使用' $ '在' dependsOn '配置中声明环境变量是
+ 弃用。 使用' env '键代替。
 </Callout>
 
 **Example**
@@ -102,21 +98,22 @@ Prefixing an item in `dependsOn` with a `$` tells `turbo` that this pipeline tas
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "build": {
-      // "A workspace's `build` command depends on its dependencies'
-      // or devDependencies' `build` command being completed first"
+      // "一个工作区的“构建”命令取决于它的依赖关系 '
+      // 或者先完成devDependencies的' build '命令"
       "dependsOn": ["^build"]
     },
     "test": {
-      // "A workspace's `test` command depends on its own `lint` and
-      // `build` commands first being completed"
+      // “一个工作区的‘test’命令依赖于它自己的‘lint’和
+      // `build` 命令首先被完成”
       "dependsOn": ["lint", "build"]
     },
     "deploy": {
-      // "A workspace's `deploy` command, depends on its own `build`
-      // and `test` commands first being completed"
+      //  一个工作区的“部署”deploy，取决于它自己的“build”
+      // ' test '命令首先被完成"
+
       "dependsOn": ["build", "test"]
     },
-    // A workspace's `lint` command has no dependencies
+    // 工作区的' lint '命令没有依赖性
     "lint": {}
   }
 }
@@ -126,7 +123,7 @@ Prefixing an item in `dependsOn` with a `$` tells `turbo` that this pipeline tas
 
 `type: string[]`
 
-The list of environment variables a task depends on.
+任务所依赖的环境变量列表。
 
 **Example**
 
@@ -136,43 +133,42 @@ The list of environment variables a task depends on.
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["SOMETHING_ELSE"], // value will impact the hashes of all build tasks
+      "env": ["SOMETHING_ELSE"], // 值将影响所有构建任务的散列
       "outputs": ["dist/**", ".next/**"]
     },
     "web#build": {
       "dependsOn": ["^build"],
-      "env": ["STRIPE_SECRET_KEY"], // value will impact hash of only web's build task
+      "env": ["STRIPE_SECRET_KEY"], // 值只会影响web的构建任务的散列
       "outputs": [".next/**"]
     }
   },
   "globalEnv": [
-    "GITHUB_TOKEN" // value will impact the hashes of all tasks
+    "GITHUB_TOKEN" // 值将影响所有任务的散列
   ]
 }
 ```
 
 <Callout type="info">
-  When Turborepo detects a common frontend framework in a workspace, it will
-  automatically depend on environment variables that are going to be inlined in
-  your build. For example, if the `web` workspace contains a Next.js project,
-  you do not need to specify any environment variables that [start with
-  `NEXT_PUBLIC_`](https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser)
-  in the `dependsOn` config. Turborepo already knows that the build output will
-  change when the value of these environment variables change, so it will depend
-  on them automatically. See more in the [docs on
-  caching](/docs/core-concepts/caching#automatic-environment-variable-inclusion).
+  当Turborepo在工作空间中检测到公共前端框架时，它就会这样做
+  自动依赖于将内联的环境变量
+  您的构建。 例如，如果“web”工作区包含Next.js项目，
+  您不需要指定任何环境变量[以
+  ' NEXT_PUBLIC_ '] (https://nextjs.org/docs/basic-features/environment-variables # exposing-environment-variables-to-the-browser)
+  在' dependsOn '配置中。 Turborepo已经知道构建输出将会
+  当这些环境变量的值发生变化时，也会发生变化，因此它将取决于
+  自动。 更多信息请参见[文档上
+  缓存](/ docs /核心概念/缓存# automatic-environment-variable-inclusion)。
 </Callout>
 
 ### `outputs`
 
 `type: string[]`
 
-Defaults to `["dist/**", "build/**"]`. The set of glob patterns of a task's cacheable filesystem outputs.
+默认为' ["dist/**"， "build/**"] '。 任务的可缓存文件系统输出的glob模式集。
 
-Note: `turbo` automatically logs `stderr`/`stdout` to `.turbo/run-<task>.log`. This file is _always_ treated as a cacheable artifact and never needs to be specified.
+注意:`turbo` 自动记录`stderr`/`stdout` to`.turbo/run-<task>.log`. 这个文件总是被视为可缓存的工件，从来不需要指定。
 
-Passing an empty array can be used to tell `turbo` that a task is a side-effect and thus doesn't emit any filesystem artifacts (e.g. like a linter), but you still want to cache its logs (and treat them like an artifact).
-
+传递一个空数组可以用来告诉' turbo '一个任务是一个副作用，因此不会产生任何文件系统工件(例如，linter)，但您仍然希望缓存它的日志(并将它们视为工件)。
 **Example**
 
 ```jsonc
@@ -180,25 +176,25 @@ Passing an empty array can be used to tell `turbo` that a task is a side-effect 
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "build": {
-      // "Cache all files emitted to workspace's dist/** or .next
-      // directories by a `build` task"
+      // "缓存发送到工作区的dist/**或。next的所有文件
+      // 目录由'build'任务"
       "outputs": ["dist/**", ".next/**"],
       "dependsOn": ["^build"]
     },
     "test": {
-      // "Don't cache any artifacts of `test` tasks (aside from
-      // logs)"
+      // "不缓存'test'任务的任何工件(除了
+      / /日志)”
       "outputs": [],
       "dependsOn": ["build"]
     },
     "test:ci": {
-      // "Cache the coverage report of a `test:ci` command"
+      // "缓存' test:ci '命令的覆盖率报告"
       "outputs": ["coverage/**"],
       "dependsOn": ["build"]
     },
     "dev": {
-      // Never cache anything (including logs) emitted by a
-      // `dev` task
+      // 从不缓存对象发出的任何内容(包括日志)
+       // dev的任务
       "cache": false
     }
   }
@@ -209,8 +205,7 @@ Passing an empty array can be used to tell `turbo` that a task is a side-effect 
 
 `type: boolean`
 
-Defaults to `true`. Whether or not to cache the task [`outputs`](#outputs). Setting `cache` to false is useful for daemon or long-running "watch" or development mode tasks you don't want to cache. 
-
+默认为“真正的”。 是否缓存任务[' outputs '](#outputs)。 将' cache '设置为false对于您不想缓存的守护进程或长时间运行的“监视”或开发模式任务非常有用。
 **Example**
 
 ```jsonc
@@ -235,12 +230,11 @@ Defaults to `true`. Whether or not to cache the task [`outputs`](#outputs). Sett
 
 `type: string[]`
 
-Defaults to `[]`. Tells `turbo` the set of files to consider when determining if a workspace has changed for a particular task.
-Setting this to a list of globs will cause the task to only be rerun when files matching those globs have
-changed. This can be helpful if you want to, for example, skip running tests unless a source file changed.
+默认为“[]”。 告诉' turbo '在确定工作空间是否为特定任务更改时要考虑的文件集。
+将此设置为一个glob列表将导致只有当匹配这些glob的文件存在时才重新运行任务
+改变了。 例如，如果您想要跳过运行测试，除非源文件更改，那么这将很有帮助。
 
-Specifying `[]` will cause the task to be rerun when any file in the workspace changes.
-
+指定'[]'将导致当工作区中的任何文件更改时重新运行任务。
 **Example**
 
 ```jsonc
@@ -250,12 +244,12 @@ Specifying `[]` will cause the task to be rerun when any file in the workspace c
     // ... omitted for brevity
 
     "test": {
-      // A workspace's `test` task depends on that workspace's
-      // own `build` task being completed first.
+      //工作空间的“测试”任务依赖于该工作空间的
+      //自己的' build '任务首先完成。
       "dependsOn": ["build"],
       "outputs": [""],
-      // A workspace's `test` task should only be rerun when
-      // either a `.tsx` or `.ts` file has changed.
+      // 工作区的“test”任务应该只在以下情况下重新运行
+         // either a '。 tsx’或‘。 Ts的文件已更改。
       "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts"]
     }
   }
@@ -263,8 +257,9 @@ Specifying `[]` will cause the task to be rerun when any file in the workspace c
 ```
 
 <Callout type="info">
-  Note: `turbo.json` is *always* considered an input. If you modify
-  `turbo.json`, all caches are invalidated.
+
+  注意:`turbo.json`总是被认为是输入。 如果你修改
+  `turbo.json`，所有缓存都无效。
 </Callout>
 
 ### `outputMode`
